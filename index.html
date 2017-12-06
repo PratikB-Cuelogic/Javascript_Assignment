@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="School Website">
+  	<meta name="keywords" content="teacher,student">
+  	<meta name="author" content="Pratik Bamb">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TEN+ | Blog</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script src="./js/script.js"></script>
+	<script src="./js/RegistrationModule.js"></script>
+	<script src="./js/StorageModule.js"></script>
+	<script src="./js/LoginModule.js"></script>
+	<script src="./js/HomeModule.js"></script>
+	<script src="./js/MemberDisplay.js"></script>
+	<script src="./js/addStudentModule.js"></script>
+	<script src="./js/EditProfile.js"></script>
+</head>
+<body onload=details();>
+	
+
+	<header id="header">
+			<nav>
+				<ul style="color: #ffffff; font-weight: bold; list-style-type: none;">
+					<li style="display: inline; float: left; padding-bottom: 1%; margin-left: 1%" onclick="HomeModule.showUserDetails()">HOME</li>
+					<li style="display: inline; float: left; padding-bottom: 1%; margin-left: 1%" id="login_check" onclick="MemberDisplay.displayMembers()"></li>
+					<li style="display: inline; float: left; padding-bottom: 1%; margin-left: 1%" onclick="EditProfile.displayUserProfile()">EDIT PROFILE</li>
+				</ul>
+			</nav>
+			<div>
+				<ul style="color: #ffffff; font-weight: bold; list-style-type: none;">
+					<li style="display: inline; float: right; padding-bottom: 1%; margin-left: 1%;padding-right: 5%" onclick="HomeModule.logout()">LOGOUT</li>
+				</ul>
+				<span id="user" style="float: right;color: #ffffff;padding-right: 5%">sdfgdfg</span>
+			</div>
+	</header>
+
+
+<div class="container">
+	<div id="login_page">
+		<div id="login">
+				<div class="span_title">
+				<span >LOGIN</span><br>
+			</div>	
+			<div class="log_ind">
+				<label class="login_content">EMAIL - ID</label>
+				<input type="text" id="login_email" placeholder="Pratik" class="input_content" style="width: 45%;">
+				<br><p></p>
+			</div>
+			<div class="log_ind">
+				<label class="login_content">PASSWORD</label>
+				<input type="password" id="login_password" placeholder="Pratik1234" class="input_content" style="width: 45%">
+				<br><p></p>
+			</div>
+			<div>
+					<button type="submit" class="button_1" onclick="LoginModule.login();">LOGIN</button>
+					<button type="reset" class="button_1">CLEAR</button>
+					<button type="signup" class="button_1" onclick="LoginModule.signup();">SIGN UP</button>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div id="registration_page" >
+		<div id="registration">
+				<div class="span_title">
+					<span>REGISTRATION</span><br><br><br>
+				</div>
+				<div class="log_ind1">
+					<label class="reg_content">FIRST NAME</label>
+					<input type="text" id="fname" placeholder="Pratik" class="input_content">
+					<label class="warning">*First Name Required</label>
+					<label id="changefname">*Initial should start with character</label>
+					<br><p></p>
+				</div>
+				<div class="log_ind1">
+					<label class="reg_content">LAST NAME</label>
+					<input type="text" id="lname" placeholder="Pratik1234" class="input_content">
+					<label class="warning">*Last Name Required</label>
+					<label id="changelname">*Initial should start with character</label>
+					<br><p></p>
+				</div>
+				<div class="log_ind1">
+					<label class="reg_content">GENDER</label>
+					<select id="gender">
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
+					</select>
+					<label class="warning">*Gender Required</label>
+						<br><p></p>
+				</div>
+				<div class="log_ind1">
+						<label class="reg_content">EMAIL-ID</label>
+						<input type="text" id="email" placeholder="Pratik1234" class="input_content">
+						<label class="warning">*Email Required</label>
+						<label id="notValidEmail">*Invalid Email</label>
+						<br><p></p>
+					</div>
+					<div class="log_ind1">
+						<label class="reg_content">PASSWORD</label>
+						<input type="text" id="password" placeholder="Pratik1234" class="input_content">
+						<label class="warning">*Password Required</label>
+						<label id="changepassword">*Invalid Email</label>
+						<br><p></p>
+					</div>
+					<div class="log_ind1">
+						<label class="reg_content">CONFIRM PASSWORD</label>
+						<input type="password" id="cpassword" placeholder="Pratik1234" class="input_content">
+						<label class="warning">*Password Not Same</label>
+						<br><p></p>
+					</div>
+					<div class="log_ind1">
+						<label class="reg_content">PROFESSION</label>
+						<select id="profession">
+							<option value="Student">Student</option>
+							<option value="Teacher">Teacher</option>
+						</select>
+						<label class="warning">*Profession Required</label>
+						<br><p></p>
+					</div>
+					<div class="log_ind1">
+						<label class="reg_content">SECURITY QUESTION</label>
+						<select id="squestion">
+							<option value="1">Grand Father's Name</option>
+							<option value="2">Birth place</option>
+							<option value="3">Favourite Place</option>
+							<option value="4">Favourite Food</option>
+							<option value="3">Favourite Animal</option>
+						</select>
+						<label class="warning">*Security Question Required</label>
+						<br><p></p>
+					</div>
+					<div class="log_ind1">
+						<label class="reg_content">ANSWER</label>
+						<input type="text" id="sanswer" placeholder="Pratik1234" class="input_content">
+						<label class="warning">*Security Answer Required</label>
+						<br><p></p>
+					</div>
+					<br>
+					<div>
+						<button type="submit" class="button_1" onclick="RegistrationModule.register()";>REGISTER</button>
+						<button type="signup" class="button_1" onclick="onclear();">CLEAR</button>
+					</div>
+			</div>
+		</div>
+
+
+		<button type="submit" class="button_1" id="addStudent" onclick="addStudentModule.showRegistrationBlock()">Add Student</button>
+		<br>
+				
+		<div id="student_teacher_page">
+				<div id="userWelcome">
+                    <span style="font-weight: bold; color: #1d6a9a;font-size: 30px;">Welcome to DashBoard</span><br>
+                    <div id="userDetails">
+              		</div>
+              		<div id="userInfo">
+              		</div>
+                </div>
+		</div>
+
+		<div id="edit_details">
+				<div id="details_update">
+                    <span style="font-weight: bold; color: #1d6a9a;font-size: 30px;">Welcome to DashBoard</span>
+                    <div id="userChangeDetails">
+                    	<table cellpadding="10" width="50%;">
+                    		<tr>
+                    			<th>Parameter</th>
+                    			<th>Details</th>
+                    		</tr>
+                    		<tr>
+                    			<td>First Name</td>
+                    			<td><input type="text" id="ufname"  class="input_content" style="float: none;width: 90%"></td>
+                    		</tr>
+                    		<tr>
+	                    		<td>Last Name</td>
+	                    		<td><input type="text" id="ulname"  class="input_content" style="float: none;width: 90%"></td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>Email</td>
+	                    		<td><input type="text" id="uemail"  class="input_content" style="float: none;width: 90%"></td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>Password</td>
+	                    		<td><input type="password" id="upassword"  class="input_content" style="float: none;width: 90%"></td>
+	                    	</tr>
+
+	                    	<tr>
+	                    		<td>Confirm Password</td>
+	                    		<td><input type="password" id="ucpassword"  class="input_content" style="float: none;width: 90%"></td>
+	                    	</tr>
+	                    </table>
+	                    <br>
+        	            <div>
+							<button type="submit" class="button_1" style="width: 19%;padding-bottom:1.5%;padding-top: 1.5%" onclick="EditProfile.changeUserProfile()";>REGISTER</button>
+							<button type="signup" class="button_1" style="width: 19%;padding-bottom:1.5%;padding-top: 1.5%" onclick="onclear();">CLEAR</button>
+						</div>
+              		</div>
+                </div>
+		</div>
+
+
+		<div id="teacher_addStudent">
+				<div id="addStudent1">
+					<div class="span_title">
+					<span>STUDENT REGISTRATION</span><br><br><br>
+				</div>
+				<div class="log_ind1">
+					<label class="reg_content">FIRST NAME</label>
+					<input type="text" id="afname" placeholder="Pratik" class="input_content">
+					<label class="warning">*First Name Required</label>
+					<br><p></p>
+				</div>
+				<div class="log_ind1">
+					<label class="reg_content">LAST NAME</label>
+					<input type="text" id="alname" placeholder="Pratik1234" class="input_content">
+					<label class="warning">*Last Name Required</label>
+					<br><p></p>
+				</div>
+				<div class="log_ind1">
+					<label class="reg_content">GENDER</label>
+					<select id="agender">
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
+					</select>
+					<label class="warning">*Gender Required</label>
+						<br><p></p>
+				</div>
+				<div class="log_ind1">
+						<label class="reg_content">EMAIL-ID</label>
+						<input type="text" id="aemail" placeholder="Pratik1234" class="input_content">
+						<label class="warning">*Email Required</label>
+						<label id="notValidEmail">*Invalid Email</label>
+						<br><p></p>
+					</div>
+					<div class="log_ind1">
+						<label class="reg_content">PASSWORD</label>
+						<input type="password" id="apassword" placeholder="Pratik1234" class="input_content">
+						<label class="warning">*Password Required</label>
+						<br><p></p>
+					</div>
+					<div class="log_ind1">
+						<label class="reg_content">CONFIRM PASSWORD</label>
+						<input type="password" id="acpassword" placeholder="Pratik1234" class="input_content">
+						<label class="warning">*Password Not Same</label>
+						<br><p></p>
+					</div>
+					<div class="log_ind1">
+						<label class="reg_content">PROFESSION</label>
+						<select id="aprofession">
+							<option value="Student">Student</option>
+						</select>
+						<label class="warning">*Profession Required</label>
+						<br><p></p>
+					</div>
+					<div class="log_ind1">
+						<label class="reg_content">SECURITY QUESTION</label>
+						<select id="asquestion">
+							<option value="1">Grand Father's Name</option>
+							<option value="2">Birth place</option>
+							<option value="3">Favourite Place</option>
+							<option value="4">Favourite Food</option>
+							<option value="3">Favourite Animal</option>
+						</select>
+						<label class="warning">*Security Question Required</label>
+						<br><p></p>
+					</div>
+					<div class="log_ind1">
+						<label class="reg_content">ANSWER</label>
+						<input type="text" id="asanswer" placeholder="Pratik1234" class="input_content">
+						<label class="warning">*Security Answer Required</label>
+						<br><p></p>
+					</div>
+					<br>
+					<div>
+						<button type="submit" class="button_1" onclick="RegistrationModule.register1()";>REGISTER</button>
+						<button type="signup" class="button_1" onclick="onclear();">CLEAR</button>
+					</div>
+                </div>
+		</div>
+
+</div>
+</body>
+</html>

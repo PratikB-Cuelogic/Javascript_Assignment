@@ -1,0 +1,185 @@
+/* Global */
+body{
+	background: url("/home/pratik/Javascript_Assignment/images/bg.jpg");
+	background-size: cover;
+	font: 15px/1.5 Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+
+#header{
+	display: none;
+	width: 100%;
+	background: #000;
+	padding: 1%;
+	padding-bottom: 4%;"
+}
+
+.container{
+width: 95%;
+margin: auto;
+overflow: hidden;
+}
+
+input[type="text"].input_content,input[type="password"].input_content,div#registration div select,div#addStudent1 div select{
+float: left;
+border:1px solid #042133;
+height: 24px;
+outline: none;	
+margin-left: 2%;
+padding-left: 2%;
+width: 30%;
+background-color: #ffffff;
+}
+
+div#registration div select,div#addStudent1 div select{
+	width: 32.5%;
+}
+
+button.button_1{
+	float: left;
+	margin: 1px 0.5% 1px 2%;
+	background: #1d6a9a;
+    color: white;
+    outline: none;
+    padding: 2% 5.5% 2% 5.5%;
+    border-radius: 20px;
+    font-weight: bolder;
+    width: 30%;
+    border: 2px solid white; 
+    font-size: 13px;
+}
+
+button.button_1:hover{
+	background: #042133;;
+	border:2px solid #042133;
+}
+/*  Local */
+div#login{
+	background-color: #ffffff; 
+	opacity: 0.8;
+	border-radius: 10px;
+	max-height: 200px;
+	min-height: 180px;
+	max-width: 30%;
+    padding:1.75%;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 200px;
+
+}
+
+
+div#registration div,div#addStudent1 div{
+	width: 70%;
+}
+
+.span_title span{
+    font-weight: bold;
+    color: #1d6a9a;
+    font-size: 30px;
+}
+
+
+label.login_content{
+	float: left;
+    font-weight: bold;
+    color: #042133;
+    font-size: 18px;
+}
+
+div.log_ind{
+width: 100%;
+margin: 7% 0 7%;
+}
+
+div.log_ind1{
+width: 100%;
+margin: 3.5% 0 3.5%;
+}
+
+label.login_content{
+	width: 50%;
+}
+
+label.reg_content {
+    float: left;
+    font-weight: bold;
+    color: #042133;
+    font-size: 18px;
+    width: 30%;
+}
+
+label.warning,#notValidEmail,#changelname,#changefname,#changepassword{
+	display:none;
+    margin-top: 2px;
+    width: 13%;
+    text-align: right;
+    font-weight: bold;
+    color: #ff0000;
+    font-size: 14px;
+    padding-left: 2%;
+}
+
+div#registration,div#userWelcome,div#addStudent1,div#details_update{
+	background-color: #ffffff; 
+	opacity: 0.8;
+	border-radius: 10px;
+	max-height: 750px;
+	min-height: 750px;
+	max-width: 80%;
+    padding: 0.6% 1.75% 0.6% 1.75%;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+
+div#student_teacher,div#userWelcome{
+	max-width: 60%;
+	min-height: 400px;
+}
+
+
+#login_check,#user{
+	text-transform: uppercase;
+}
+
+#login_check:hover{
+	font-weight: 100;
+}
+
+#addStudent{
+	display: none;
+	margin: 3%;
+    border: navajowhite;
+    width: 20%;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 19px;
+    padding: 1%;
+}
+
+.stud_teach{
+	margin-top: 5%;
+}
+
+
+table th{
+	font-weight: bold;
+	font-size: 18px;
+}
+
+table td{
+	font-size: 15px;
+}
+table{
+	text-align: center;
+    border-collapse: collapse;
+
+}
+
+#student_teacher_page,#teacher_addStudent,#edit_details{
+	display: none;
+}
